@@ -1,0 +1,75 @@
+section {
+  width: 100%;
+
+  .banner-container {
+    position: relative;
+    height: 800px;
+    width: 100%;
+    max-width: 100%;
+    background-image: url(../../../assets/images/banner-background.png);
+    border-image: fill 0 linear-gradient(#0001, #000);
+    display: flex;
+    animation: move-position 1s forwards;
+
+    @keyframes move-position {
+      0% {
+        background-position: unset;
+      }
+      100% {
+        background-position: center;
+      }
+    }
+
+    .banner-title {
+      position: absolute;
+      height: 600px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h1 {
+        font-family: "Sansita Swashed";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 74px;
+        line-height: 89px;
+        color: #f5f5f5;
+        text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
+        animation: fade-up 1s forwards;
+
+        @keyframes fade-up {
+          0% {
+            opacity: 0;
+            transform: translateY(300px) scale(0.1);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+
+  svg {
+    position: relative;
+    display: block;
+    width: calc(133% + 1.3px);
+    height: 109px;
+  }
+
+  .shape-fill {
+    fill: var(--background-color);
+  }
+}
