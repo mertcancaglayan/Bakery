@@ -3,7 +3,12 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 100px;
-  max-width: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(3px);
+  height: 90px;
+  z-index: 999;
 
   .header-icon {
     width: 50%;
