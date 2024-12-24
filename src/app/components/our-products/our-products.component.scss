@@ -1,0 +1,83 @@
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.75rem;
+
+  h2 {
+    text-align: center;
+    font-family: "Sansita Swashed";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 74px;
+    line-height: 89px;
+    color: black;
+    text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
+  }
+
+  .products-category-nav {
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      list-style-type: none;
+      width: 4rem;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50px;
+        span {
+          font-size: 20px;
+          font-family: "Lobster Two", serif;
+          font-weight: 400;
+          font-style: normal;
+          text-decoration: none;
+          color: black;
+        }
+        label {
+          width: 4rem;
+          content: "";
+          height: 2px;
+          background-color: brown;
+        }
+      }
+    }
+  }
+
+  .products {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    height: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+
+    &.snaps-inline {
+      scroll-snap-type: inline mandatory;
+    }
+
+    &.snaps-inline > * {
+      scroll-snap-align: start;
+    }
+    .product-content {
+      width: 100%;
+      min-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 0 auto;
+    }
+  }
+}
