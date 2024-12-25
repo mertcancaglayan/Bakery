@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from './components/layouts/header/header.component';
 import { BannerComponent } from "./components/banner/banner.component";
 import { OurProductsComponent } from "./components/our-products/our-products.component";
+import { CustomersChoiceComponent } from "./components/customers-choice/customers-choice.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, OurProductsComponent],
+  imports: [HeaderComponent, BannerComponent, OurProductsComponent, CustomersChoiceComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
