@@ -3,7 +3,7 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2.75rem;
+  gap: 2.25rem;
 
   h2 {
     text-align: center;
@@ -14,6 +14,12 @@ section {
     line-height: 89px;
     color: black;
     text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
+    transition: text-shadow 0.4s ease;
+    cursor: default;
+
+    &:hover {
+      text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.6);
+    }
   }
 
   .products-category-nav {
@@ -30,7 +36,14 @@ section {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 50px;
+        width: 4rem;
+        cursor: pointer;
+        transition: 0.4s ease;
+
+        &:hover {
+          scale: 1.1;
+        }
+
         span {
           font-size: 20px;
           font-family: "Lobster Two", serif;
@@ -43,7 +56,21 @@ section {
           width: 4rem;
           content: "";
           height: 2px;
-          background-color: brown;
+          background-color: transparent;
+        }
+        &.active {
+          label {
+            animation: labelColor 0.5s normal forwards;
+
+            @keyframes labelColor {
+              0% {
+                background-color: transparent;
+              }
+              100% {
+                background-color: #7a5937;
+              }
+            }
+          }
         }
       }
     }
@@ -54,13 +81,13 @@ section {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 25px;
     height: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
     overflow-x: auto;
     overflow-y: hidden;
     overscroll-behavior-inline: contain;
+    padding: 10px 5px;
 
     &.snaps-inline {
       scroll-snap-type: inline mandatory;
@@ -76,8 +103,24 @@ section {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      margin: 0 auto;
+      gap: 15px;
     }
+  }
+}
+
+app-card {
+  width: 20%;
+  aspect-ratio: 1.4/1;
+}
+
+@media (max-width: 1024px) {
+  app-card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  app-card {
+    width: 45%;
   }
 }

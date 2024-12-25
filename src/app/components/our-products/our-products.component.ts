@@ -8,16 +8,19 @@ import {
   PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
+import { CardComponent } from '../layouts/card/card.component';
 
 @Component({
   selector: 'app-our-products',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CardComponent],
   templateUrl: './our-products.component.html',
   styleUrl: './our-products.component.scss',
 })
 export class OurProductsComponent implements AfterViewInit {
   @ViewChild('slider') sliderRef!: ElementRef<HTMLElement>;
+
+  selectedCategory: number = 1;
 
   slider!: HTMLElement;
 
@@ -31,6 +34,11 @@ export class OurProductsComponent implements AfterViewInit {
         return;
       }
     }
+  }
+
+  selectCategory(category: number) {
+    this.selectedCategory = category;
+    this.slide(category);
   }
 
   slide(index: number): void {
