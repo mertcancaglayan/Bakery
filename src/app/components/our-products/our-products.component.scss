@@ -1,109 +1,146 @@
-section {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.25rem;
+.our-products-container {
+  display: grid;
+  .button-container {
+    display: flex;
+    justify-content: end;
+    width: 75%;
+    justify-self: center;
+    button {
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ffff;
+      background-color: #ac7a49;
+      cursor: pointer;
+      transition: scale 0.4s ease;
 
-  h2 {
-    text-align: center;
-    font-family: "Sansita Swashed";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 74px;
-    line-height: 89px;
-    color: black;
-    text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
-    transition: text-shadow 0.4s ease;
-    cursor: default;
+      a {
+        font-size: 16px;
+        font-family: "Lobster Two", serif;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        color: var(--text-color);
+        letter-spacing: 1px;
+        transition: color 0.4s ease;
+      }
 
-    &:hover {
-      text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.6);
+      &:hover {
+        scale: 1.02;
+        background-color: var(--background-color);
+        a {
+          color: black;
+        }
+      }
     }
   }
 
-  .products-category-nav {
+  article {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.25rem;
+
+    h2 {
+      text-align: center;
+      font-family: "Sansita Swashed";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 74px;
+      line-height: 89px;
+      color: black;
+      text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
+      transition: text-shadow 0.4s ease;
+      cursor: default;
+
+      &:hover {
+        text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    .products-category-nav {
       display: flex;
-      align-items: center;
       justify-content: center;
-      gap: 3rem;
-      list-style-type: none;
-      width: 4rem;
-      li {
+      ul {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        list-style-type: none;
         width: 4rem;
-        cursor: pointer;
-        transition: 0.4s ease;
-
-        &:hover {
-          scale: 1.1;
-        }
-
-        span {
-          font-size: 20px;
-          font-family: "Lobster Two", serif;
-          font-weight: 400;
-          font-style: normal;
-          text-decoration: none;
-          color: black;
-        }
-        label {
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
           width: 4rem;
-          content: "";
-          height: 2px;
-          background-color: transparent;
-        }
-        &.active {
-          label {
-            animation: labelColor 0.5s normal forwards;
+          cursor: pointer;
+          transition: 0.4s ease;
 
-            @keyframes labelColor {
-              0% {
-                background-color: transparent;
-              }
-              100% {
-                background-color: #7a5937;
+          &:hover {
+            scale: 1.1;
+          }
+
+          span {
+            font-size: 20px;
+            font-family: "Lobster Two", serif;
+            font-weight: 400;
+            font-style: normal;
+            text-decoration: none;
+            color: black;
+          }
+          label {
+            width: 4rem;
+            content: "";
+            height: 2px;
+            background-color: transparent;
+          }
+          &.active {
+            label {
+              animation: labelColor 0.5s normal forwards;
+
+              @keyframes labelColor {
+                0% {
+                  background-color: transparent;
+                }
+                100% {
+                  background-color: #7a5937;
+                }
               }
             }
           }
         }
       }
     }
-  }
 
-  .products {
-    width: 75%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    overflow-x: auto;
-    overflow-y: hidden;
-    overscroll-behavior-inline: contain;
-    padding: 10px 5px;
-
-    &.snaps-inline {
-      scroll-snap-type: inline mandatory;
-    }
-
-    &.snaps-inline > * {
-      scroll-snap-align: start;
-    }
-    .product-content {
-      width: 100%;
-      min-width: 100%;
+    .products {
+      width: 75%;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: row;
       align-items: center;
-      justify-content: center;
-      gap: 15px;
+      height: 100%;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+      overflow-x: auto;
+      overflow-y: hidden;
+      overscroll-behavior-inline: contain;
+      padding: 10px 5px;
+
+      &.snaps-inline {
+        scroll-snap-type: inline mandatory;
+      }
+
+      &.snaps-inline > * {
+        scroll-snap-align: start;
+      }
+      .product-content {
+        width: 100%;
+        min-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+      }
     }
   }
 }

@@ -1,61 +1,66 @@
-<section>
-  <h2>Our Products</h2>
+<div class="our-products-container">
+  <article>
+    <h2>Our Products</h2>
 
-  <div class="products-category-nav">
-    <ul>
-      <li
-        id="cake-nav"
-        [class.active]="selectedCategory === 1"
-        (click)="selectCategory(1)"
-      >
-        <span>Cake</span><label></label>
-      </li>
-      <li
-        id="muffin-nav"
-        [class.active]="selectedCategory === 2"
-        (click)="selectCategory(2)"
-      >
-        <span>Muffins</span><label></label>
-      </li>
-      <li
-        id="croissant-nav"
-        [class.active]="selectedCategory === 3"
-        (click)="selectCategory(3)"
-      >
-        <span>Croissant</span><label></label>
-      </li>
-      <li
-        id="bread-nav"
-        [class.active]="selectedCategory === 4"
-        (click)="selectCategory(4)"
-      >
-        <span>Bread</span><label></label>
-      </li>
-      <li
-        id="tart-nav"
-        [class.active]="selectedCategory === 5"
-        (click)="selectCategory(5)"
-      >
-        <span>Tart</span><label></label>
-      </li>
-    </ul>
-  </div>
+    <div class="products-category-nav">
+      <ul>
+        <li
+          id="cake-nav"
+          [class.active]="selectedCategory === 1"
+          (click)="selectCategory(1)"
+        >
+          <span>Cake</span><label></label>
+        </li>
+        <li
+          id="muffin-nav"
+          [class.active]="selectedCategory === 2"
+          (click)="selectCategory(2)"
+        >
+          <span>Muffins</span><label></label>
+        </li>
+        <li
+          id="croissant-nav"
+          [class.active]="selectedCategory === 3"
+          (click)="selectCategory(3)"
+        >
+          <span>Croissant</span><label></label>
+        </li>
+        <li
+          id="bread-nav"
+          [class.active]="selectedCategory === 4"
+          (click)="selectCategory(4)"
+        >
+          <span>Bread</span><label></label>
+        </li>
+        <li
+          id="tart-nav"
+          [class.active]="selectedCategory === 5"
+          (click)="selectCategory(5)"
+        >
+          <span>Tart</span><label></label>
+        </li>
+      </ul>
+    </div>
 
-  <div #slider class="products snaps-inline">
-    <div id="cakes" class="product-content">
-      <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+    <div #slider class="products snaps-inline">
+      <div id="cakes" class="product-content">
+        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+      </div>
+      <div id="muffins" class="product-content">
+        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+      </div>
+      <div id="croissant" class="product-content">
+        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+      </div>
+      <div id="bread" class="product-content">
+        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+      </div>
+      <div id="tart" class="product-content">
+        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+      </div>
     </div>
-    <div id="muffins" class="product-content">
-      <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
-    </div>
-    <div id="croissant" class="product-content">
-      <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
-    </div>
-    <div id="bread" class="product-content">
-      <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
-    </div>
-    <div id="tart" class="product-content">
-      <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
-    </div>
+  </article>
+  <div class="button-container">
+    <button><a href="">View All Products</a></button>
   </div>
-</section>
+</div>
