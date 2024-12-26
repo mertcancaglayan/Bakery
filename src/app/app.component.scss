@@ -1,8 +1,12 @@
 section {
-    padding-bottom: 48px;
+  padding-bottom: 48px;
   border-bottom: 1px solid #ffff;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  app-todays-choice{
+    width: 100%;
+  }
 }

@@ -1,0 +1,222 @@
+<h2>Today's Choice</h2>
+<article class="todays-choice-container">
+  <div class="content">
+    <div class="slider-navs">
+      <ul>
+        <li
+          id="brownie-nav"
+          [class.active]="selectedCategory === 1"
+          (click)="selectCategory(1)"
+        >
+          <span>Brownie</span><label></label>
+        </li>
+        <li
+          id="cookie-nav"
+          [class.active]="selectedCategory === 2"
+          (click)="selectCategory(2)"
+        >
+          <span>Cookie</span><label></label>
+        </li>
+        <li
+          id="baguette-nav"
+          [class.active]="selectedCategory === 3"
+          (click)="selectCategory(3)"
+        >
+          <span>Baguette</span><label></label>
+        </li>
+        <li
+          id="croissants-nav"
+          [class.active]="selectedCategory === 4"
+          (click)="selectCategory(4)"
+        >
+          <span>Croissants</span><label></label>
+        </li>
+      </ul>
+    </div>
+    <div #imageSlider class="image-slider snaps-block">
+      <div class="image-container today-choice-image">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_PvTvvyQi-B69Cp9Yl3P9p8tpauRD6Q1dg&s"
+          alt=""
+        />
+      </div>
+      <div class="image-container today-choice-image">
+        <img
+          src="https://www.lurch.de/media/f0/e5/95/1684923933/american-cookies-rezept.jpg?ts=1684923933"
+          alt=""
+        />
+      </div>
+      <div class="image-container today-choice-image">
+        <img
+          src="https://static01.nyt.com/images/2023/07/21/multimedia/21baguettesrex-hbkc/21baguettesrex-hbkc-master768.jpg?quality=75&auto=webp"
+          alt=""
+        />
+      </div>
+      <div class="image-container today-choice-image">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfF9hRVcnFAcHVq8gAnwhaLdLU6A2LYj9Gs5nlpes4OQLRAFt7qPpLXTjx68rHYES9JTLsqTJ1c3aUqW_9I0GJ9SUQlGmb1qaj3uZtfw"
+          alt=""
+        />
+      </div>
+    </div>
+    <div #ingredientsSlider class="ingredients-slider snaps-block">
+      <div class="table-container">
+        <h4>Brownie</h4>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Nutrient</th>
+              <th>Amount (G)</th>
+              <th>DV(%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total fat</td>
+              <td>56</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>Cholesterol</td>
+              <td>32</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Potassium</td>
+              <td>78</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>calories</td>
+              <td>86</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>carbohydrate</td>
+              <td>38</td>
+              <td>43</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-container">
+        <h4>Cookie</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Nutrient</th>
+              <th>Amount (G)</th>
+              <th>DV(%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total fat</td>
+              <td>56</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>Cholesterol</td>
+              <td>32</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Potassium</td>
+              <td>78</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>calories</td>
+              <td>86</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>carbohydrate</td>
+              <td>38</td>
+              <td>43</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-container">
+        <h4>Baguette</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Nutrient</th>
+              <th>Amount (G)</th>
+              <th>DV(%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total fat</td>
+              <td>56</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>Cholesterol</td>
+              <td>32</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Potassium</td>
+              <td>78</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>calories</td>
+              <td>86</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>carbohydrate</td>
+              <td>38</td>
+              <td>43</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-container">
+        <h4>Croissant</h4>
+        <table>
+          <thead>
+            <tr>
+              <th>Nutrient</th>
+              <th>Amount (G)</th>
+              <th>DV(%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Total fat</td>
+              <td>56</td>
+              <td>28</td>
+            </tr>
+            <tr>
+              <td>Cholesterol</td>
+              <td>32</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Potassium</td>
+              <td>78</td>
+              <td>42</td>
+            </tr>
+            <tr>
+              <td>calories</td>
+              <td>86</td>
+              <td>64</td>
+            </tr>
+            <tr>
+              <td>carbohydrate</td>
+              <td>38</td>
+              <td>43</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</article>
