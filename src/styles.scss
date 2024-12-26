@@ -2,10 +2,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 :root {
-  --background-color:  #d3bd9a;
+  --background-color: #d3bd9a;
   --text-color: #f5f5f5;
   --item-gap: 2.75rem;
   --navbar-element-width: 5rem;
+  --text-font: "Lobster Two", serif;
+  --text-font-size: 20px;
+  --title-font: "Sansita Swashed";
+  --title-font-size: 74px;
+  --title-line-height: 89px;
+  --title-font-color: black;
+  --title-font-weight: 400;
+  --title-text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
+  --line-color: #7a5937;
 }
 
 * {

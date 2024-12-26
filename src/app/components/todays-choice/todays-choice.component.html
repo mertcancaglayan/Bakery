@@ -4,11 +4,11 @@
     <div class="slider-navs">
       <ul>
         <li
-          id="browni-nav"
+          id="brownie-nav"
           [class.active]="selectedCategory === 1"
           (click)="selectCategory(1)"
         >
-          <span>Browni</span><label></label>
+          <span>Brownie</span><label></label>
         </li>
         <li
           id="cookie-nav"
@@ -34,27 +34,34 @@
       </ul>
     </div>
     <div #imageSlider class="image-slider snaps-block">
-      <img
-        class="today-choice-image"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt6V2zzRRpRTu3PH_1RYh2b_7NPaWhGL2TzBCs5d-_Q8-LP7qU0SqkD9qF-PekH106_24&usqp=CAU"
-        alt=""
-      /><img
-        class="today-choice-image"
-        src="https://www.lurch.de/media/f0/e5/95/1684923933/american-cookies-rezept.jpg?ts=1684923933"
-        alt=""
-      /><img
-        class="today-choice-image"
-        src="https://static01.nyt.com/images/2023/07/21/multimedia/21baguettesrex-hbkc/21baguettesrex-hbkc-master768.jpg?quality=75&auto=webp"
-        alt=""
-      /><img
-        class="today-choice-image"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfF9hRVcnFAcHVq8gAnwhaLdLU6A2LYj9Gs5nlpes4OQLRAFt7qPpLXTjx68rHYES9JTLsqTJ1c3aUqW_9I0GJ9SUQlGmb1qaj3uZtfw"
-        alt=""
-      />
+      <div class="image-container today-choice-image">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_PvTvvyQi-B69Cp9Yl3P9p8tpauRD6Q1dg&s"
+          alt=""
+        />
+      </div>
+      <div class="image-container today-choice-image">
+        <img
+          src="https://www.lurch.de/media/f0/e5/95/1684923933/american-cookies-rezept.jpg?ts=1684923933"
+          alt=""
+        />
+      </div>
+      <div class="image-container today-choice-image">
+        <img
+          src="https://static01.nyt.com/images/2023/07/21/multimedia/21baguettesrex-hbkc/21baguettesrex-hbkc-master768.jpg?quality=75&auto=webp"
+          alt=""
+        />
+      </div>
+      <div class="image-container today-choice-image">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfF9hRVcnFAcHVq8gAnwhaLdLU6A2LYj9Gs5nlpes4OQLRAFt7qPpLXTjx68rHYES9JTLsqTJ1c3aUqW_9I0GJ9SUQlGmb1qaj3uZtfw"
+          alt=""
+        />
+      </div>
     </div>
     <div #ingredientsSlider class="ingredients-slider snaps-block">
       <div class="table-container">
-        <h2>Browni</h2>
+        <h4>Brownie</h4>
 
         <table>
           <thead>
@@ -94,7 +101,7 @@
         </table>
       </div>
       <div class="table-container">
-        <h2>Cookie</h2>
+        <h4>Cookie</h4>
         <table>
           <thead>
             <tr>
@@ -133,7 +140,7 @@
         </table>
       </div>
       <div class="table-container">
-        <h2>Baguette</h2>
+        <h4>Baguette</h4>
         <table>
           <thead>
             <tr>
@@ -172,7 +179,7 @@
         </table>
       </div>
       <div class="table-container">
-        <h2>Croissant</h2>
+        <h4>Croissant</h4>
         <table>
           <thead>
             <tr>
