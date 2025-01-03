@@ -4,11 +4,12 @@ import { BannerComponent } from "./components/banner/banner.component";
 import { OurProductsComponent } from "./components/our-products/our-products.component";
 import { CustomersChoiceComponent } from "./components/customers-choice/customers-choice.component";
 import { TodaysChoiceComponent } from "./components/todays-choice/todays-choice.component";
+import { OurServicesComponent } from "./components/our-services/our-services.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, OurProductsComponent, CustomersChoiceComponent, TodaysChoiceComponent],
+  imports: [HeaderComponent, BannerComponent, OurProductsComponent, CustomersChoiceComponent, TodaysChoiceComponent, OurServicesComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
