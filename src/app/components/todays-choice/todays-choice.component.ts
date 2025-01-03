@@ -19,20 +19,20 @@ export class TodaysChoiceComponent implements AfterViewInit {
   selectedCategory: number = 1;
 
   @ViewChild('imageSlider') imageSliderRef!: ElementRef<HTMLElement>;
-  @ViewChild('ingredientsSlider')
-  ingredientsSliderRef!: ElementRef<HTMLElement>;
+  @ViewChild('descriptionsSlider')
+  descriptionsSliderRef!: ElementRef<HTMLElement>;
 
   imageSlider!: HTMLElement;
-  ingredientsSlider!: HTMLElement;
+  descriptionsSlider!: HTMLElement;
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
       this.imageSlider = this.imageSliderRef?.nativeElement;
-      this.ingredientsSlider = this.ingredientsSliderRef?.nativeElement;
+      this.descriptionsSlider = this.descriptionsSliderRef?.nativeElement;
 
-      if (!this.imageSlider || !this.ingredientsSlider) {
+      if (!this.imageSlider || !this.descriptionsSlider) {
         console.error('One or more slider elements not found.');
         return;
       }
@@ -45,18 +45,18 @@ export class TodaysChoiceComponent implements AfterViewInit {
   }
 
   slide(index: number): void {
-    if (!this.imageSlider || !this.ingredientsSlider) return;
+    if (!this.imageSlider || !this.descriptionsSlider) return;
 
     this.slideImages(index);
-    this.slideIngredients(index);
+    this.slidedescriptions(index);
   }
 
   slideImages(index: number) {
     this.scrollToPosition(this.imageSlider, index, '.today-choice-image');
   }
 
-  slideIngredients(index: number) {
-    this.scrollToPosition(this.ingredientsSlider, index, '.table-container');
+  slidedescriptions(index: number) {
+    this.scrollToPosition(this.descriptionsSlider, index, '.description-container');
   }
 
   private scrollToPosition(
@@ -67,7 +67,7 @@ export class TodaysChoiceComponent implements AfterViewInit {
     const slides = slider.querySelectorAll(selector);
     const slideHeight = slides[0]?.clientHeight || 0;
 
-    if(selector=== ".table-container") {
+    if (selector === '.description-container') {
       slider.scrollTo({
         top: slideHeight * -(index - 1),
         behavior: 'smooth',
@@ -78,7 +78,5 @@ export class TodaysChoiceComponent implements AfterViewInit {
         behavior: 'smooth',
       });
     }
-
-
   }
 }
