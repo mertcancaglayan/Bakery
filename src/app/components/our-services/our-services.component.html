@@ -1,0 +1,15 @@
+<div class="services-container">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="services-card" *ngFor="let service of services">
+      <div class="icon-container">
+        <span
+          class="services-icon"
+          [innerHTML]="getSanitizedHtml(service.icon)"
+        ></span>
+      </div>
+      <h3>{{ service.title }}</h3>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+</div>
