@@ -3,8 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 :root {
-  --background-color: #d3bd9a;
-  --text-color: #f5f5f5;
   --item-gap: 2.75rem;
   --navbar-element-width: 5rem;
   --text-font: "Lobster Two", serif;
@@ -12,11 +10,23 @@
   --title-font: "Sansita Swashed";
   --title-font-size: 74px;
   --title-line-height: 89px;
-  --title-font-color: black;
   --title-font-weight: 400;
   --title-text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
   --line-color: #7a5937;
   --paragraph-font: "Playfair Display";
+  --card-background-color: wheat;
+
+  /* Light Theme */
+  --primary-light: #eac696; /* Soft Caramel */
+  --secondary-light: #fdf6e3; /* Vanilla Cream111 */
+  --background-light: #d3bd9a;
+  --text-light: #5b4636; /* Chocolate Brown */
+  --highlight-light: #f9d6ac; /* Almond */
+
+  /* Dark Theme */
+  --primary-dark: #8d6e63; /* Cocoa Brown */
+  --secondary-dark: #4e342e; /* Espresso */
+  --text-dark: #f8e5d0; /* Cream Frosting */
 }
 
 * {
@@ -27,10 +37,24 @@
 
 body {
   position: relative;
-  background: var(--background-color);
+  background: var(--background-light);
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   max-width: 100dvw;
+}
+
+h1,
+h2 {
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+  line-height: var(--title-line-height);
+  font-weight: var(--title-font-weight);
+  text-shadow: var(--title-text-shadow);
+  color: var(--secondary-dark);
+}
+
+h1 {
+  color: var(--secondary-light);
 }

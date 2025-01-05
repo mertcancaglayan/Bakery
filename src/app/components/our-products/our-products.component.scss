@@ -8,27 +8,26 @@
     button {
       padding: 5px;
       border-radius: 5px;
-      border: 1px solid #ffff;
-      background-color: #ac7a49;
+      border: 1px solid var(--line-color);
       cursor: pointer;
       transition: scale 0.4s ease;
+      background-color: var(--secondary-dark);
+      color: var(--text-light);
 
       a {
-        font-size: 16px;
-        font-family: "Lobster Two", serif;
-        font-weight: 400;
-        font-style: normal;
+        font-size: calc(var(--text-font-size) - 4px);
+        font-family: var(--text-font);
         text-decoration: none;
-        color: var(--text-color);
+        color: var(--secondary-light);
         letter-spacing: 1px;
         transition: color 0.4s ease;
       }
 
       &:hover {
         scale: 1.02;
-        background-color: var(--background-color);
+        background-color: var(--primary-light);
         a {
-          color: black;
+          color: var(--text-light);
         }
       }
     }
@@ -43,13 +42,6 @@
 
     h2 {
       text-align: center;
-      font-family: "Sansita Swashed";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 74px;
-      line-height: 89px;
-      color: black;
-      text-shadow: -3px 3px 1px rgba(0, 0, 0, 0.6);
       transition: text-shadow 0.4s ease;
       cursor: default;
 
@@ -81,10 +73,10 @@
           }
 
           span {
-            font-size: 20px;
-            font-family: "Lobster Two", serif;
+            font-size: var(--text-font-size);
+            font-family: var(--text-font);
             text-decoration: none;
-            color: black;
+            color: var(--text-light);
           }
           label {
             width: 4rem;
@@ -101,7 +93,7 @@
                   background-color: transparent;
                 }
                 100% {
-                  background-color: #7a5937;
+                  background-color: var(--line-color);
                 }
               }
             }
