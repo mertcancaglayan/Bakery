@@ -93,6 +93,7 @@
           overflow: hidden;
           text-overflow: ellipsis;
           display: -webkit-box;
+          line-clamp: var(--line-clamp);
           -webkit-line-clamp: var(--line-clamp);
           -webkit-box-orient: vertical;
           font-family: var(--paragraph-font);
