@@ -1,6 +1,14 @@
 .blog-section-container {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  align-items: center;
+  margin: 20px 0 0;
+  gap: var(--item-gap);
+
+  p {
+    font-family: var(--paragraph-font);
+    font-size: var(--text-font-size);
+    color: var(--secondary-dark);
+  }
 }
