@@ -5,7 +5,8 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: scale 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
-  background-color: wheat;
+  background-color: var(--card-background-color);
+
 
   &:hover {
     scale: 1.02;
@@ -26,12 +27,10 @@
     figcaption {
       padding: 10px 15px;
       gap: 5px;
-      background-color: wheat;
-      font-size: 18px;
-      font-family: "Lobster Two", serif;
-      font-weight: 400;
-      color: rgb(88, 66, 23);
-
+      font-size: var(--text-font-size);
+      font-family: var(--text-font);
+      color:var(--text-light);
+      background-color: var(--card-background-color);
       letter-spacing: 1px;
       display: flex;
       flex-direction: column;
@@ -46,7 +45,7 @@
 
       .product-price {
         font-weight: 500;
-        font-family: "Times New Roman", Times, serif;
+        font-family: var(--paragraph-font);
       }
     }
   }
