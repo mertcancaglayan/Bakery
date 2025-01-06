@@ -6,11 +6,12 @@ import { CustomersChoiceComponent } from "./components/customers-choice/customer
 import { TodaysChoiceComponent } from "./components/todays-choice/todays-choice.component";
 import { OurServicesComponent } from "./components/our-services/our-services.component";
 import { BlogSectionComponent } from "./components/blog-section/blog-section.component";
+import { NewsLetterComponent } from "./components/news-letter/news-letter.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, OurProductsComponent, CustomersChoiceComponent, TodaysChoiceComponent, OurServicesComponent, BlogSectionComponent],
+  imports: [HeaderComponent, BannerComponent, OurProductsComponent, CustomersChoiceComponent, TodaysChoiceComponent, OurServicesComponent, BlogSectionComponent, NewsLetterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
