@@ -1,0 +1,107 @@
+section.our-history {
+  width: 100%;
+}
+
+.our-history-container {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  max-width: 1400px;
+  margin: 40px auto;
+  background-color: var(--secondary-light);
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  .timeline {
+    flex: 1;
+    margin-right: 20px;
+
+    .timeline-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      gap: 1rem;
+      margin-bottom: 40px;
+      max-width: 650px;
+
+      h4 {
+        background-color: var(--secondary-dark);
+        color: var(--secondary-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        width: 100px;
+        min-width: 100px;
+        max-height: 30px;
+      }
+
+      p {
+        padding: 15px;
+        background-color: var(--background-light);
+        border-radius: 5px;
+        color: var(--secondary-dark);
+        font-family: var(--paragraph-font);
+      }
+    }
+  }
+
+  .video-section {
+    max-width: 600px;
+    flex: 1;
+
+    .video-container {
+      position: relative;
+
+      video {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section.our-history {
+    width: 100%;
+  }
+
+  .our-history-container {
+    display: flex;
+    flex-direction: column;
+
+    .timeline {
+      flex: 1;
+      margin-right: 20px;
+
+      .timeline-item {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 40px;
+        font-family: var(--paragraph-font);
+
+        h3 {
+          background-color: var(--secondary-dark);
+          color: var(--secondary-light);
+          display: inline-block;
+          padding: 10px 20px;
+          border-radius: 5px;
+          margin: 0 0 10px 0;
+        }
+
+        p {
+          margin: 0;
+          padding: 15px;
+          background-color: var(--background-light);
+          border-radius: 5px;
+          color: var(--secondary-dark);
+        }
+      }
+    }
+
+    .video-section {
+      min-width: 350px;
+    }
+  }
+}

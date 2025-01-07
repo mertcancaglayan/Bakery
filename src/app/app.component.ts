@@ -8,11 +8,12 @@ import { OurServicesComponent } from "./components/our-services/our-services.com
 import { BlogSectionComponent } from "./components/blog-section/blog-section.component";
 import { NewsLetterComponent } from "./components/news-letter/news-letter.component";
 import { FooterComponent } from "./components/layouts/footer/footer.component";
+import { AboutComponent } from "./pages/about/about.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, OurProductsComponent, CustomersChoiceComponent, TodaysChoiceComponent, OurServicesComponent, BlogSectionComponent, NewsLetterComponent, FooterComponent],
+  imports: [HeaderComponent, BannerComponent, OurProductsComponent, CustomersChoiceComponent, TodaysChoiceComponent, OurServicesComponent, BlogSectionComponent, NewsLetterComponent, FooterComponent, AboutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

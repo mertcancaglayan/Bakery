@@ -1,0 +1,81 @@
+section {
+  display: block;
+  justify-items: center;
+  width: 100%;
+  padding: 90px 0 0;
+  min-height: 90dvh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://www.flypgs.com/blog/wp-content/uploads/2023/02/anadolu-yakasi-en-iyi-bakery-dukkanlari.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .about-us-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 75%;
+    gap: var(--item-gap);
+    padding: var(--item-gap);
+    min-height: 450px;
+    height: auto;
+    background: rgb(211, 189, 154, 0.35);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    .image-container {
+      min-width: 350px;
+      width: 350px;
+      height: 450px;
+      overflow: hidden;
+      border-radius: 20px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .text-container {
+      width: 750px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      text-align: start;
+      min-height: 450px;
+
+      .our-business,
+      .who-we-are {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        color: var(--secondary-light);
+      }
+      h3 {
+        font-family: var(--title-font);
+        font-size: calc(var(--title-font-size) - 30px);
+        font-weight: var(--title-font-weight);
+      }
+
+      p {
+        font-family: var(--paragraph-font);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    .about-us-container {
+      flex-direction: column;
+
+      .text-container {
+        max-width: 80%;
+      }
+    }
+  }
+}
