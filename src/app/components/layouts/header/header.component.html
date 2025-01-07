@@ -453,7 +453,7 @@ l120 -68 -3 -54 c-7 -102 -40 -130 -153 -130 -52 0 -59 2 -59 19 0 27 31 34
   </div>
   <nav>
     <div class="navElement" *ngFor="let element of navbarElements">
-      <a href=""> {{ element }}</a>
+      <a [routerLink]="['/' + (element | lowercase)]"> {{ element }}</a>
     </div>
   </nav>
 </header>
