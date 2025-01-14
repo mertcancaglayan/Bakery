@@ -2,13 +2,14 @@ section {
   display: block;
   justify-items: center;
   width: 100%;
-  padding: 90px 0 0;
+  padding: 120px 0 0;
   min-height: 90dvh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(https://www.flypgs.com/blog/wp-content/uploads/2023/02/anadolu-yakasi-en-iyi-bakery-dukkanlari.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  border-bottom: 1px solid #ffff;
 
   .about-us-container {
     display: flex;

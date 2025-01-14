@@ -1,5 +1,13 @@
 section.our-history {
   width: 100%;
+  margin: 50px 0 0;
+  border-bottom: 1px solid #ffff;
+
+  h2 {
+    text-align: center;
+    cursor: default;
+    margin: 0 0 50px;
+  }
 }
 
 .our-history-container {
@@ -63,42 +71,9 @@ section.our-history {
 }
 
 @media screen and (max-width: 1024px) {
-  section.our-history {
-    width: 100%;
-  }
-
   .our-history-container {
     display: flex;
     flex-direction: column;
-
-    .timeline {
-      flex: 1;
-      margin-right: 20px;
-
-      .timeline-item {
-        display: flex;
-        gap: 1rem;
-        margin-bottom: 40px;
-        font-family: var(--paragraph-font);
-
-        h3 {
-          background-color: var(--secondary-dark);
-          color: var(--secondary-light);
-          display: inline-block;
-          padding: 10px 20px;
-          border-radius: 5px;
-          margin: 0 0 10px 0;
-        }
-
-        p {
-          margin: 0;
-          padding: 15px;
-          background-color: var(--background-light);
-          border-radius: 5px;
-          color: var(--secondary-dark);
-        }
-      }
-    }
 
     .video-section {
       min-width: 350px;
