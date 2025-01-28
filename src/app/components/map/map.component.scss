@@ -1,6 +1,8 @@
 .map-container {
-  position: relative;
-  width: 70%;
+  width: min(
+    100% - 2rem,
+    var(--content-max-width)
+  );
   aspect-ratio: 2/1;
   margin: 90px 0 0;
   display: block;

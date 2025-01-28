@@ -6,12 +6,12 @@
   padding: 50px 0;
 
   .section-header {
-    width: 75%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: calc(var(--item-gap) - 0.75rem);
+    gap: calc(var(--section-gap) - 0.25rem);
 
     .header-background-image {
       justify-self: center;
@@ -23,11 +23,6 @@
           stroke: var(--secondary-dark);
         }
       }
-    }
-
-    h2 {
-      text-align: center;
-      cursor: default;
     }
 
     p {
@@ -101,7 +96,7 @@
         font-size: 12px;
 
         &::-webkit-input-placeholder {
-          font-size: 12ğx;
+          font-size: 12px;
         }
       }
     }

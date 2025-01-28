@@ -10,6 +10,7 @@ section {
     border-image: fill 0 linear-gradient(#0001, #000);
     display: flex;
     animation: move-position 1s forwards;
+    background-attachment: fixed;
 
     @keyframes move-position {
       0% {
