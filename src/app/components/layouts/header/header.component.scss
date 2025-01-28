@@ -9,6 +9,11 @@ header {
   backdrop-filter: blur(3px);
   height: 90px;
   z-index: 999;
+  transition: top .6s ease;
+
+  &.hidden {
+    top: -100px;
+  }
 
   .header-icon {
     svg {
