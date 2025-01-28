@@ -2,19 +2,15 @@ section.our-history {
   width: 100%;
   margin: 50px 0 0;
   border-bottom: 1px solid #ffff;
-
-  h2 {
-    text-align: center;
-    cursor: default;
-    margin: 0 0 50px;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
 }
 
 .our-history-container {
+  width: 100%;
   display: flex;
   align-items: center;
-  width: 75%;
-  max-width: 1400px;
   margin: 40px auto;
   background-color: var(--secondary-light);
   border-radius: 5px;

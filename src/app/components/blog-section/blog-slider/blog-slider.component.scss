@@ -37,7 +37,6 @@
     overflow-x: auto;
     overflow-y: hidden;
     overscroll-behavior-inline: contain;
-    margin-left: 10px;
     gap: 1%;
 
     &.snaps-inline {
@@ -53,10 +52,10 @@
       width: 32.4%;
       max-width: 32.4%;
       height: 410px;
-      left: 10px;
       background-color: var(--card-background-color);
       border-radius: 10px;
       overflow: hidden;
+
 
       .slide-img {
         width: 100%;
@@ -139,7 +138,6 @@
 }
 
 @media (max-width: 768px) {
-
   .slider-container {
     .slides-area {
       .slide {
@@ -149,7 +147,6 @@
       }
     }
   }
-
 
   .next-btn,
   .prev-btn {
@@ -169,7 +166,4 @@
       }
     }
   }
-
-
-
 }

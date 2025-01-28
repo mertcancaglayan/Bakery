@@ -1,22 +1,22 @@
 section.map-section {
   display: block;
-  justify-items: center;
   width: 100%;
-  padding: 30px 0 0;
-  min-height: 90dvh;
+  padding: 30px 0;
+  min-height: auto;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url(https://www.flypgs.com/blog/wp-content/uploads/2023/02/anadolu-yakasi-en-iyi-bakery-dukkanlari.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   border-bottom: 1px solid #ffff;
+  background-attachment: fixed;
 }
 
 .contact-section {
   display: flex;
-  justify-content: space-around;
-  padding: 70px 20px;
-
+  justify-content: space-between;
+  width: 100%;
+  padding: 70px 0;
   app-contact-info {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
@@ -30,4 +30,6 @@ section.map-section {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
+
 }

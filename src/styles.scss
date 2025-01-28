@@ -3,7 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
 :root {
-  --item-gap: 2.75rem;
+  --section-gap: 2.25rem;
+  --item-gap: 15px;
   --navbar-element-width: 5rem;
   --text-font: "Lobster Two", serif;
   --text-font-size: 20px;
@@ -16,6 +17,7 @@
   --paragraph-font: "Playfair Display";
   --card-background-color: wheat;
   --section-border-radius: 20px;
+  --content-padding: 10px 5px
 
   /* Light Theme */
   --primary-light: #eac696; /* Soft Caramel */
@@ -46,6 +48,42 @@ body {
   max-width: 100dvw;
 }
 
+.content-grid {
+  --padding-inline: 1rem;
+  --content-max-width: 1400px;
+  --breakout-max-width: 1800px;
+  --breakout-size: calc(
+    (var(--breakout-max-width) - var(--content-max-width)) / 2
+  );
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start] minmax(var(--padding-inline), 1fr)
+    [breakout-start] minmax(0, var(--breakout-size))
+    [content-start] min(
+      100% - (var(--padding-inline) * 2),
+      var(--content-max-width)
+    )
+    [content-end]
+    minmax(0, var(--breakout-size)) [breakout-end]
+    minmax(var(--padding-inline), 1fr) [full-width-end];
+}
+
+.content-grid > :not(.breakout, .full-width),
+.full-width > :not(.breakout, .full-width) {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+  display: grid;
+  grid-template-columns: inherit;
+}
+
 h1,
 h2 {
   font-family: var(--title-font);
@@ -58,6 +96,16 @@ h2 {
 
 h1 {
   color: var(--secondary-light);
+}
+
+.section-title {
+    text-align: center;
+    transition: text-shadow 0.4s ease;
+    cursor: default;
+
+    &:hover {
+      text-shadow: -2px 2px 1px rgba(0, 0, 0, 0.6);
+    }
 }
 
 app-root {
