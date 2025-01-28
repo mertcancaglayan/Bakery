@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { navbarElements } from '../../../state/navbar/navbar.state';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -12,4 +12,20 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
   navbarElements: string[] = navbarElements;
+
+  isNavbarVisible = true;
+  private lastScrollTop = 0;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > this.lastScrollTop) {
+      this.isNavbarVisible = false;
+    } else {
+      this.isNavbarVisible = true;
+    }
+
+    this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  }
 }
