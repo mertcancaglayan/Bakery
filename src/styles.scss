@@ -15,6 +15,7 @@
   --line-color: #7a5937;
   --paragraph-font: "Playfair Display";
   --card-background-color: wheat;
+  --section-border-radius: 20px;
 
   /* Light Theme */
   --primary-light: #eac696; /* Soft Caramel */
@@ -57,4 +58,11 @@ h2 {
 
 h1 {
   color: var(--secondary-light);
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100dvh;
 }
