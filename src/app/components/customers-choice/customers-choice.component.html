@@ -3,7 +3,9 @@
 
   <div class="products">
     <div class="product-content">
-      <app-card *ngFor="let i of [].constructor(6)"></app-card>
+      <ng-container *ngFor="let i of customersChoice; index as idx">
+        <app-card [item]="i"></app-card>
+      </ng-container>
     </div>
   </div>
 </article>

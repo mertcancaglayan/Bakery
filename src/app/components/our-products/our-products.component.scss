@@ -49,11 +49,12 @@
         gap: 3rem;
         list-style-type: none;
         --list-item-width: 4rem;
-        width: var(--list-item-width);
+
         li {
           display: flex;
           flex-direction: column;
           align-items: center;
+          min-width: fit-content;
           width: var(--list-item-width);
           cursor: pointer;
           transition: 0.4s ease;
@@ -95,14 +96,14 @@
     .products {
       display: flex;
       flex-direction: row;
-      align-items: center;
+      align-items: flex-start;
       height: 100%;
       -ms-overflow-style: none;
       scrollbar-width: none;
       overflow-x: auto;
       overflow-y: hidden;
       overscroll-behavior-inline: contain;
-      padding: var(--content-padding);
+      padding: var(--item-gap);
 
       .product-content {
         width: 100%;

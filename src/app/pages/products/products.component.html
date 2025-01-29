@@ -18,6 +18,19 @@
         </li>
         <li>
           <div class="checkbox-wrapper-4">
+            <input class="inp-cbx" id="muffins" type="checkbox" />
+            <label class="cbx" for="muffins">
+              <span>
+                <svg width="12px" height="10px">
+                  <use xlink:href="#check-4"></use>
+                </svg>
+              </span>
+              <span>Muffins</span>
+            </label>
+          </div>
+        </li>
+        <li>
+          <div class="checkbox-wrapper-4">
             <input class="inp-cbx" id="tarts" type="checkbox" />
             <label class="cbx" for="tarts">
               <span>
@@ -106,17 +119,9 @@
   </aside>
   <section>
     <div class="products-container">
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
-      <app-card></app-card>
+      <ng-container *ngFor="let i of allItems; index as idx">
+        <app-card [item]="i"></app-card>
+      </ng-container>
     </div>
   </section>
 </main>
