@@ -4,10 +4,12 @@ import {
   Component,
   ElementRef,
   Inject,
+  Input,
   PLATFORM_ID,
   ViewChild,
 } from '@angular/core';
 import { CardComponent } from '../layouts/card/card.component';
+import { Categories } from '../../models/store-data.model';
 
 @Component({
   selector: 'app-our-products',
@@ -18,6 +20,7 @@ import { CardComponent } from '../layouts/card/card.component';
 })
 export class OurProductsComponent implements AfterViewInit {
   @ViewChild('slider') sliderRef!: ElementRef<HTMLElement>;
+  @Input() data?: Categories;
 
   selectedCategory: number = 1;
 

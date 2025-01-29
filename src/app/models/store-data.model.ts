@@ -1,5 +1,11 @@
 export interface StoreData {
-  data: Categories;
+  data: CategoryData[];
+  loading: boolean;
+  error: any;
+}
+
+export interface CategoryData {
+  categories: Categories;
 }
 
 export interface Categories {

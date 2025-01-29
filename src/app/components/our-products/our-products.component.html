@@ -5,11 +5,11 @@
     <div class="products-category-nav">
       <ul>
         <li
-          id="cake-nav"
+          id="classic-nav"
           [class.active]="selectedCategory === 1"
           (click)="selectCategory(1)"
         >
-          <span>Cake</span><label></label>
+          <span>Classic</span><label></label>
         </li>
         <li
           id="muffin-nav"
@@ -19,11 +19,11 @@
           <span>Muffins</span><label></label>
         </li>
         <li
-          id="croissant-nav"
+          id="cake-nav"
           [class.active]="selectedCategory === 3"
           (click)="selectCategory(3)"
         >
-          <span>Croissant</span><label></label>
+          <span>Cakes</span><label></label>
         </li>
         <li
           id="bread-nav"
@@ -37,26 +37,58 @@
           [class.active]="selectedCategory === 5"
           (click)="selectCategory(5)"
         >
-          <span>Tart</span><label></label>
+          <span>Hot Beverages</span><label></label>
         </li>
       </ul>
     </div>
 
     <div #slider class="products snaps-inline">
-      <div id="cakes" class="product-content">
-        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+      <div id="classics" class="product-content">
+        <ng-container
+          *ngFor="
+            let i of data?.desserts?.dessertCategories?.classic | slice : 0 : 8;
+            index as idx
+          "
+        >
+          <app-card [item]="i"></app-card>
+        </ng-container>
       </div>
       <div id="muffins" class="product-content">
-        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+        <ng-container
+          *ngFor="
+            let i of data?.desserts?.dessertCategories?.muffins | slice : 0 : 8;
+            index as idx
+          "
+        >
+          <app-card [item]="i"></app-card>
+        </ng-container>
       </div>
-      <div id="croissant" class="product-content">
-        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+      <div id="cakes" class="product-content">
+        <ng-container
+          *ngFor="
+            let i of data?.desserts?.dessertCategories?.cakes | slice : 0 : 8;
+            index as idx
+          "
+        >
+          <app-card [item]="i"></app-card>
+        </ng-container>
       </div>
       <div id="bread" class="product-content">
-        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+        <ng-container
+          *ngFor="let i of data?.breads | slice : 0 : 8; index as idx"
+        >
+          <app-card [item]="i"></app-card>
+        </ng-container>
       </div>
       <div id="tart" class="product-content">
-        <app-card *ngFor="let i of [].constructor(6); index as idx"></app-card>
+        <ng-container
+          *ngFor="
+            let i of data?.drinks?.drinkTypes?.hotBeverages | slice : 0 : 8;
+            index as idx
+          "
+        >
+          <app-card [item]="i"></app-card>
+        </ng-container>
       </div>
     </div>
   </article>

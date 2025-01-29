@@ -1,12 +1,9 @@
 <div class="product-card">
   <figure>
-    <img
-      src="https://picsum.photos/id/112/300/300.webp"
-      alt="Red Velvet Cake"
-    />
+    <img loading="lazy" [src]="item?.image" [alt]="item?.name" />
     <figcaption>
-      <span class="product-name">Red Velvet</span>
-      <span class="product-price">$20</span>
+      <span class="product-name">{{item?.name}}</span>
+      <span class="product-price">{{item?.type}}</span>
     </figcaption>
   </figure>
 </div>
