@@ -1,4 +1,6 @@
 import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { RouterOutlet } from '@angular/router';
+
 import {
   AfterViewInit,
   Component,
@@ -10,11 +12,12 @@ import {
 } from '@angular/core';
 import { CardComponent } from '../layouts/card/card.component';
 import { Categories } from '../../models/store-data.model';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-our-products',
   standalone: true,
-  imports: [CommonModule, CardComponent],
+  imports: [CommonModule, CardComponent, RouterLink, RouterOutlet],
   templateUrl: './our-products.component.html',
   styleUrl: './our-products.component.scss',
 })
