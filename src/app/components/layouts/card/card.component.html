@@ -1,9 +1,9 @@
 <div class="product-card">
-  <figure>
+  <figure [title]="item?.name">
     <img loading="lazy" [src]="item?.image" [alt]="item?.name" />
     <figcaption>
-      <span class="product-name">{{item?.name}}</span>
-      <span class="product-price">{{item?.type}}</span>
+      <span class="product-name">{{ item?.name }}</span>
+      <span class="product-price">{{ item?.type }}</span>
     </figcaption>
   </figure>
 </div>
