@@ -1,115 +1,73 @@
 <main>
   <aside>
     <div class="filter-container">
-      <h4>Categories</h4>
       <ul>
-        <li>
-          <div class="checkbox-wrapper-4">
-            <input class="inp-cbx" id="desserts" type="checkbox" />
-            <label class="cbx" for="desserts">
-              <span>
-                <svg width="12px" height="10px">
-                  <use xlink:href="#check-4"></use>
-                </svg>
-              </span>
-              <span>Desserts</span>
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox-wrapper-4">
-            <input class="inp-cbx" id="muffins" type="checkbox" />
-            <label class="cbx" for="muffins">
-              <span>
-                <svg width="12px" height="10px">
-                  <use xlink:href="#check-4"></use>
-                </svg>
-              </span>
-              <span>Muffins</span>
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox-wrapper-4">
-            <input class="inp-cbx" id="tarts" type="checkbox" />
-            <label class="cbx" for="tarts">
-              <span>
-                <svg width="12px" height="10px">
-                  <use xlink:href="#check-4"></use>
-                </svg>
-              </span>
-              <span>Tarts</span>
-            </label>
-          </div>
-        </li>
-        <li id="beverages-dropdown">
-          <div class="checkbox-wrapper-4">
-            <input class="inp-cbx" id="beverages" type="checkbox" />
-            <label class="cbx" for="beverages">
-              <span>
-                <svg width="12px" height="10px">
-                  <use xlink:href="#check-4"></use>
-                </svg>
-              </span>
-              <span>Beverages</span>
-            </label>
-          </div>
-          <ul id="beverages-categories">
-            <li>
-              <div class="checkbox-wrapper-4">
-                <input class="inp-cbx" id="hot-beverages" type="checkbox" />
-                <label class="cbx" for="hot-beverages">
-                  <span>
-                    <svg width="12px" height="10px">
-                      <use xlink:href="#check-4"></use>
-                    </svg>
-                  </span>
-                  <span>Hot Beverages</span>
-                </label>
-              </div>
-            </li>
-            <li>
-              <div class="checkbox-wrapper-4">
-                <input class="inp-cbx" id="cold-beverages" type="checkbox" />
-                <label class="cbx" for="cold-beverages">
-                  <span>
-                    <svg width="12px" height="10px">
-                      <use xlink:href="#check-4"></use>
-                    </svg>
-                  </span>
-                  <span>Cold Beverages</span>
-                </label>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <div class="checkbox-wrapper-4">
-            <input class="inp-cbx" id="breads" type="checkbox" />
-            <label class="cbx" for="breads">
-              <span>
-                <svg width="12px" height="10px">
-                  <use xlink:href="#check-4"></use>
-                </svg>
-              </span>
-              <span>Breads</span>
-            </label>
-          </div>
-        </li>
-        <li>
-          <div class="checkbox-wrapper-4">
-            <input class="inp-cbx" id="cakes" type="checkbox" />
-            <label class="cbx" for="cakes">
-              <span>
-                <svg width="12px" height="10px">
-                  <use xlink:href="#check-4"></use>
-                </svg>
-              </span>
-              <span>Cakes</span>
-            </label>
-          </div>
+        <li *ngFor="let category of categories">
+          <ng-container
+            *ngIf="category.id === 'beverages'; else regularCategory"
+          >
+            <div class="checkbox-wrapper-4">
+              <input
+                class="inp-cbx"
+                id="beverages"
+                type="checkbox"
+                (change)="onCategoryChange(category.id)"
+
+              />
+              <label class="cbx" for="beverages">
+                <span>
+                  <svg width="12px" height="10px">
+                    <use xlink:href="#check-4"></use>
+                  </svg>
+                </span>
+                <span>{{ category.name }}</span>
+              </label>
+            </div>
+
+            <ul *ngIf="category.checked" id="beverages-categories">
+              <li *ngFor="let child of category.children">
+                <div class="checkbox-wrapper-4">
+                  <input
+                    class="inp-cbx"
+                    [id]="child.id"
+                    type="checkbox"
+                    (change)="onCategoryChange(child.id)"
+                  />
+                  <label class="cbx" [for]="child.id">
+                    <span>
+                      <svg width="12px" height="10px">
+                        <use xlink:href="#check-4"></use>
+                      </svg>
+                    </span>
+                    <span>{{ child.name }}</span>
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </ng-container>
+
+          <!-- Template for regular categories -->
+          <ng-template #regularCategory>
+            <div class="checkbox-wrapper-4">
+              <input
+                class="inp-cbx"
+                [id]="category.id"
+                type="checkbox"
+                (change)="onCategoryChange(category.id)"
+              />
+              <label class="cbx" [for]="category.id">
+                <span>
+                  <svg width="12px" height="10px">
+                    <use xlink:href="#check-4"></use>
+                  </svg>
+                </span>
+                <span>{{ category.name }}</span>
+              </label>
+            </div>
+          </ng-template>
         </li>
       </ul>
+
       <svg class="inline-svg">
         <symbol id="check-4" viewBox="0 0 12 10">
           <polyline points="1.5 6 4.5 9 10.5 1"></polyline>
@@ -119,9 +77,14 @@
   </aside>
   <section>
     <div class="products-container">
-      <ng-container *ngFor="let i of allItems; index as idx">
-        <app-card [item]="i"></app-card>
+      <ng-container *ngIf="filteredItems.length; else noData">
+        <ng-container *ngFor="let i of filteredItems; index as idx">
+          <app-card [item]="i"></app-card>
+        </ng-container>
       </ng-container>
+      <ng-template #noData>
+        <p class="loading">Loading....</p>
+      </ng-template>
     </div>
   </section>
 </main>
