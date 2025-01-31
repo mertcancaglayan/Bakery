@@ -18,8 +18,9 @@ aside {
   h4 {
     font-size: calc(var(--text-font-size) + 5px);
     font-weight: 600;
-    margin-bottom: 15px;
+    margin: 0 0 15px 10px;
     color: var(--secondary-light);
+    padding: 0;
   }
 
   ul {

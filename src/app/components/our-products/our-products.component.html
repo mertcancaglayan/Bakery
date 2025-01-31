@@ -1,96 +1,14 @@
 <div class="our-products-container">
   <article>
     <h2 class="section-title">Our Products</h2>
-
-    <div class="products-category-nav">
-      <ul>
-        <li
-          id="classic-nav"
-          [class.active]="selectedCategory === 1"
-          (click)="selectCategory(1)"
-        >
-          <span>Classic</span><label></label>
-        </li>
-        <li
-          id="muffin-nav"
-          [class.active]="selectedCategory === 2"
-          (click)="selectCategory(2)"
-        >
-          <span>Muffins</span><label></label>
-        </li>
-        <li
-          id="cake-nav"
-          [class.active]="selectedCategory === 3"
-          (click)="selectCategory(3)"
-        >
-          <span>Cakes</span><label></label>
-        </li>
-        <li
-          id="bread-nav"
-          [class.active]="selectedCategory === 4"
-          (click)="selectCategory(4)"
-        >
-          <span>Bread</span><label></label>
-        </li>
-        <li
-          id="tart-nav"
-          [class.active]="selectedCategory === 5"
-          (click)="selectCategory(5)"
-        >
-          <span>Hot Beverages</span><label></label>
-        </li>
-      </ul>
-    </div>
-
-    <div #slider class="products snaps-inline">
-      <div id="classics" class="product-content">
-        <ng-container
-          *ngFor="
-            let i of data?.desserts?.dessertCategories?.classic | slice : 0 : 8;
-            index as idx
-          "
-        >
-          <app-card [item]="i"></app-card>
-        </ng-container>
-      </div>
-      <div id="muffins" class="product-content">
-        <ng-container
-          *ngFor="
-            let i of data?.desserts?.dessertCategories?.muffins | slice : 0 : 8;
-            index as idx
-          "
-        >
-          <app-card [item]="i"></app-card>
-        </ng-container>
-      </div>
-      <div id="cakes" class="product-content">
-        <ng-container
-          *ngFor="
-            let i of data?.desserts?.dessertCategories?.cakes | slice : 0 : 8;
-            index as idx
-          "
-        >
-          <app-card [item]="i"></app-card>
-        </ng-container>
-      </div>
-      <div id="bread" class="product-content">
-        <ng-container
-          *ngFor="let i of data?.breads | slice : 0 : 8; index as idx"
-        >
-          <app-card [item]="i"></app-card>
-        </ng-container>
-      </div>
-      <div id="tart" class="product-content">
-        <ng-container
-          *ngFor="
-            let i of data?.drinks?.drinkTypes?.hotBeverages | slice : 0 : 8;
-            index as idx
-          "
-        >
-          <app-card [item]="i"></app-card>
-        </ng-container>
-      </div>
-    </div>
+    <app-our-products-nav
+      [selectedCategory]="selectedCategory"
+      (categorySelected)="onCategoryChange($event)"
+    ></app-our-products-nav>
+    <app-our-products-slider
+      [data]="data"
+      #sliderComponent
+    ></app-our-products-slider>
   </article>
   <div class="button-container">
     <button>

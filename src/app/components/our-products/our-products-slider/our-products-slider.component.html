@@ -1,0 +1,39 @@
+<div #slider class="products snaps-inline">
+  <div id="classics" class="product-content">
+    <ng-container
+      *ngFor="
+        let i of data?.desserts?.dessertCategories?.classic | slice : 0 : 8
+      "
+    >
+      <app-card [item]="i"></app-card>
+    </ng-container>
+  </div>
+  <div id="muffins" class="product-content">
+    <ng-container
+      *ngFor="
+        let i of data?.desserts?.dessertCategories?.muffins | slice : 0 : 8
+      "
+    >
+      <app-card [item]="i"></app-card>
+    </ng-container>
+  </div>
+  <div id="cakes" class="product-content">
+    <ng-container
+      *ngFor="let i of data?.desserts?.dessertCategories?.cakes | slice : 0 : 8"
+    >
+      <app-card [item]="i"></app-card>
+    </ng-container>
+  </div>
+  <div id="bread" class="product-content">
+    <ng-container *ngFor="let i of data?.breads | slice : 0 : 8">
+      <app-card [item]="i"></app-card>
+    </ng-container>
+  </div>
+  <div id="tart" class="product-content">
+    <ng-container
+      *ngFor="let i of data?.drinks?.drinkTypes?.hotBeverages | slice : 0 : 8"
+    >
+      <app-card [item]="i"></app-card>
+    </ng-container>
+  </div>
+</div>
