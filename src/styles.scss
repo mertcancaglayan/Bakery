@@ -114,3 +114,12 @@ app-root {
   justify-content: space-between;
   min-height: 100dvh;
 }
+
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}

@@ -1,0 +1,12 @@
+<div class="products-category-nav">
+  <ul>
+    <li
+      *ngFor="let category of categories; index as i"
+      [class.active]="selectedCategory === i + 1"
+      (click)="onSelectCategory(i + 1)"
+    >
+      <span>{{ category }}</span
+      ><label></label>
+    </li>
+  </ul>
+</div>

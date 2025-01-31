@@ -39,14 +39,6 @@
     overscroll-behavior-inline: contain;
     gap: 1%;
 
-    &.snaps-inline {
-      scroll-snap-type: inline mandatory;
-    }
-
-    &.snaps-inline > * {
-      scroll-snap-align: start;
-    }
-
     .slide {
       min-width: 32.4%;
       width: 32.4%;
@@ -55,7 +47,6 @@
       background-color: var(--card-background-color);
       border-radius: 10px;
       overflow: hidden;
-
 
       .slide-img {
         width: 100%;
