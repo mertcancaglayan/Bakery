@@ -1,9 +1,11 @@
-<div class="product-card">
-  <figure [title]="item?.name">
-    <img loading="lazy" [src]="item?.image" [alt]="item?.name" />
-    <figcaption>
-      <span class="product-name">{{ item?.name }}</span>
-      <span class="product-price">{{ item?.type }}</span>
-    </figcaption>
-  </figure>
-</div>
+<ng-container *ngIf="item">
+  <div class="product-card" (click)="navigateToProduct(item.id)">
+    <figure [title]="item.name">
+      <img loading="lazy" [src]="item.image" [alt]="item.name" />
+      <figcaption>
+        <span class="product-name">{{ item.name }}</span>
+        <span class="product-price">{{ item.type }}</span>
+      </figcaption>
+    </figure>
+  </div>
+</ng-container>

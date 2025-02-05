@@ -10,7 +10,7 @@ export interface CategoryData {
 
 export interface Categories {
   desserts: Desserts;
-  breads: Bread[];
+  breads: Item[];
   drinks: Drinks;
 }
 
@@ -25,15 +25,6 @@ export interface DessertCategories {
   classic: Classic[];
 }
 
-export interface Bread {
-  name: string;
-  type: string;
-  description: string;
-  ingredients: string[];
-  recipe: string;
-  image: string;
-}
-
 export interface Drinks {
   drinkTypes: DrinkTypes;
 }
@@ -44,6 +35,7 @@ export interface DrinkTypes {
 }
 
 export interface Item {
+  id: string;
   name: string;
   type: string;
   description: string;
@@ -52,6 +44,7 @@ export interface Item {
   image: string;
 }
 
+export interface Bread extends Item {}
 export interface Cake extends Item {}
 export interface Muffin extends Item {}
 export interface Tart extends Item {}
