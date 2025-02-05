@@ -40,9 +40,7 @@
     gap: 1%;
 
     .slide {
-      min-width: 32.4%;
-      width: 32.4%;
-      max-width: 32.4%;
+      flex: 1 0 32.4%;
       height: 410px;
       background-color: var(--card-background-color);
       border-radius: 10px;
@@ -112,6 +110,7 @@
             align-items: center;
             height: 20px;
             gap: 5px;
+            width: auto;
           }
         }
       }
@@ -132,9 +131,24 @@
   .slider-container {
     .slides-area {
       .slide {
-        min-width: 30%;
-        width: 30%;
-        max-width: 30%;
+        flex: 1 0 45%;
+
+        .slide-content {
+          h5 {
+            height: 15px;
+            line-height: 15px;
+            font-size: calc(var(--text-font-size) - 5px);
+          }
+
+          p {
+            font-size: 14px;
+          }
+        }
+
+        .date,
+        .comments {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -151,9 +165,7 @@
   .slider-container {
     .slides-area {
       .slide {
-        min-width: 48%;
-        width: 48%;
-        max-width: 48%;
+        flex: 1 0 48%;
       }
     }
   }
