@@ -19,10 +19,10 @@ export interface Desserts {
 }
 
 export interface DessertCategories {
-  cakes: Cake[];
-  muffins: Muffin[];
-  tarts: Tart[];
-  classic: Classic[];
+  cakes: Item[];
+  muffins: Item[];
+  tarts: Item[];
+  classic: Item[];
 }
 
 export interface Drinks {
