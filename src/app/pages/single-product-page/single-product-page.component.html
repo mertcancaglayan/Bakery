@@ -1,0 +1,33 @@
+<main class="content-grid">
+  <article class="product-container">
+    <div class="product-layout">
+      <div class="product-image">
+        <img [src]="product.image" [alt]="product.name" />
+      </div>
+
+      <div class="product-details">
+        <h4>{{ product.name }}</h4>
+        <div class="product-description">
+          <p>
+            {{ product.description }}
+          </p>
+        </div>
+
+        <div class="bottom-sections">
+          <section class="ingredients">
+            <h5>Ingredients:</h5>
+            <ul *ngFor="let ingredient of product.ingredients">
+              <li>{{ ingredient }}</li>
+            </ul>
+          </section>
+          <section class="recipe">
+            <h5>Recipe:</h5>
+            <p>
+              {{ product.recipe }}
+            </p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>

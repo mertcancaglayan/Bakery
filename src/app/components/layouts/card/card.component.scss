@@ -29,7 +29,6 @@
     figcaption {
       padding: 10px 15px;
       gap: 5px;
-      font-size: var(--text-font-size);
       font-family: var(--text-font);
       color: var(--text-light);
       background-color: var(--card-background-color);
@@ -42,7 +41,7 @@
 
       .product-name {
         font-weight: 700;
-        font-size: 18px;
+        font-size: var(--text-font-size);
         letter-spacing: 2px;
         max-width: 100%;
         text-overflow: ellipsis;
