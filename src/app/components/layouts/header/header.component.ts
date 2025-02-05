@@ -12,9 +12,9 @@ import { RouterLink } from '@angular/router';
 })
 export class HeaderComponent {
   navbarElements: string[] = navbarElements;
-
   isNavbarVisible = true;
   private lastScrollTop = 0;
+  isMobileNavOpen = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -27,5 +27,9 @@ export class HeaderComponent {
     }
 
     this.lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+  }
+
+  toggleMobileNav() {
+    this.isMobileNavOpen = !this.isMobileNavOpen;
   }
 }
