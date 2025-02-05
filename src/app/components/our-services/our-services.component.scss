@@ -22,7 +22,9 @@
   padding: var(--content-padding);
 
   .services-card {
-    width: 300px;
+    flex: 1 0 300px;
+    min-width: 260px;
+    height: 250px;
     border: 1px solid var(--line-color);
     background-color: var(--card-background-color);
     border-radius: 8px;

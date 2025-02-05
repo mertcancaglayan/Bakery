@@ -123,3 +123,19 @@ app-root {
 .snaps-inline > * {
   scroll-snap-align: start;
 }
+
+@media screen and (max-width: 768px) {
+ :root{
+  --title-font-size: 54px;
+  --title-line-height: 74px;
+  --title-text-shadow: -1px 1px 1px rgba(0, 0, 0, 0.6);
+
+  }
+}
+
+@media screen and (max-width: 425px) {
+  :root{
+   --title-font-size: 45px;
+   --title-line-height: 60px;
+   }
+ }
