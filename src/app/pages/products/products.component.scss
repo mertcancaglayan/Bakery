@@ -23,6 +23,20 @@ aside {
     padding: 0;
   }
 
+  .filtered-categories {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 0 15px 10px;;
+    span {
+      font-family: var(--paragrapgh-font);
+      color: var(--secondary-light);
+      text-transform: capitalize;
+    }
+  }
+
   ul {
     list-style: none;
     padding: 0;

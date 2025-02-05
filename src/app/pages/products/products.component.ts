@@ -19,7 +19,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
   private subscription = new Subscription();
   storeData$: Observable<StoreData>;
   filteredItems: Item[] = [];
-  private filterSubject = new Subject<void>();
+  filterSubject = new Subject<void>();
+  filteredCategories: Array<any> = [];
 
   categories = [
     { id: 'desserts', name: 'Desserts', checked: false },
@@ -103,6 +104,8 @@ export class ProductsComponent implements OnInit, OnDestroy {
     const selectedCategories = this.categories.filter(
       (category) => category.checked
     );
+
+    this.filteredCategories = selectedCategories;
 
     if (selectedCategories.length === 0) {
       this.filteredItems = [
