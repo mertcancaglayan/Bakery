@@ -13,7 +13,10 @@ import {
   standalone: true,
   imports: [CommonModule],
   templateUrl: './todays-choice.component.html',
-  styleUrl: './todays-choice.component.scss',
+  styleUrls: [
+    './todays-choice.component.scss',
+    './todays-choice-slider-style.scss',
+  ],
 })
 export class TodaysChoiceComponent implements AfterViewInit {
   selectedCategory: number = 1;
@@ -56,7 +59,11 @@ export class TodaysChoiceComponent implements AfterViewInit {
   }
 
   slidedescriptions(index: number) {
-    this.scrollToPosition(this.descriptionsSlider, index, '.description-container');
+    this.scrollToPosition(
+      this.descriptionsSlider,
+      index,
+      '.description-container'
+    );
   }
 
   private scrollToPosition(
