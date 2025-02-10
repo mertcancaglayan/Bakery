@@ -24,6 +24,7 @@
   .services-card {
     flex: 1 0 300px;
     min-width: 260px;
+    max-width: 300px;
     height: 250px;
     border: 1px solid var(--line-color);
     background-color: var(--card-background-color);
@@ -65,6 +66,14 @@
     p {
       color: var(--secondary-dark);
       font-family: var(--paragraph-font);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services {
+    .services-card {
+      max-width: 100%;
     }
   }
 }

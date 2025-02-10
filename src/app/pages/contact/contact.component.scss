@@ -15,13 +15,16 @@ section.map-section {
 .contact-section {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   padding: 70px 0;
+
   app-contact-info {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 25%;
     flex: 0 0 25%;
     max-width: 25%;
+    min-width: 350px;
   }
 
   app-contact-form {
@@ -30,6 +33,17 @@ section.map-section {
     flex: 0 0 50%;
     max-width: 50%;
   }
+}
 
-
+@media screen and (max-width: 768px) {
+  .contact-section {
+    gap: var(--item-gap);
+    app-contact-form,
+    app-contact-info {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
 }

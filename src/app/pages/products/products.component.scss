@@ -29,7 +29,7 @@ aside {
     align-items: center;
     justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 0 0 15px 10px;;
+    margin: 0 0 15px 10px;
     span {
       font-family: var(--paragrapgh-font);
       color: var(--secondary-light);
@@ -83,16 +83,12 @@ section {
 .products-container {
   width: 100%;
   min-width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 15px;
 }
 
 app-card {
-  width: 18%;
-  min-width: 175px;
   aspect-ratio: 1.4 / 1;
   border-radius: 8px;
 }
@@ -223,5 +219,16 @@ app-card {
   .checkbox-wrapper-4 .cbx {
     width: 100%;
     display: inline-block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter-container {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
 }

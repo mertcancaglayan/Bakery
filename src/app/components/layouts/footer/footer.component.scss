@@ -84,6 +84,7 @@
     align-items: center;
     justify-content: center;
     gap: 0.75rem;
+    padding: 1rem;
 
     color: var(--secondary-light);
     .footer-info {
@@ -91,6 +92,18 @@
       align-items: center;
       justify-content: center;
       gap: 0.75rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    .footer-bottom {
+      flex-direction: column;
+
+      .footer-info{
+        flex-direction: column;
+      }
     }
   }
 }
