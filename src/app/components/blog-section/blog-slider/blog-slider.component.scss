@@ -1,16 +1,19 @@
 .slider-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   max-width: 100%;
   width: 100%;
   .next-btn,
   .prev-btn {
-    width: 50px;
-    height: 50px;
+    display: flex;
+    justify-content: center;
     cursor: pointer;
-
+    width: 5%;
     svg {
+      width: 50px;
+      height: 50px;
+
       path {
         transition: stroke 0.3s ease-in;
         stroke: var(--line-color);
@@ -28,7 +31,6 @@
   }
 
   .slides-area {
-    max-width: 90%;
     width: 90%;
     display: flex;
     align-items: center;
@@ -37,10 +39,16 @@
     overflow-x: auto;
     overflow-y: hidden;
     overscroll-behavior-inline: contain;
+    padding: 10px;
+    scroll-padding-left: 10px;
     gap: 1%;
 
+    & > article {
+      scroll-snap-align: start;
+    }
+
     .slide {
-      flex: 1 0 32.4%;
+      flex: 1 0 32.6%;
       height: 410px;
       background-color: var(--card-background-color);
       border-radius: 10px;
@@ -118,7 +126,6 @@
   }
 }
 
-/* Responsive Adjustments */
 @media (max-width: 1200px) {
   .slider-container {
     .slides-area {
@@ -129,7 +136,13 @@
 
 @media (max-width: 768px) {
   .slider-container {
+    
+    .next-btn,
+    .prev-btn {
+      display: none;
+    }
     .slides-area {
+      width: 100%;
       .slide {
         flex: 1 0 45%;
 
@@ -165,7 +178,7 @@
   .slider-container {
     .slides-area {
       .slide {
-        flex: 1 0 48%;
+        flex: 1 0 90%;
       }
     }
   }

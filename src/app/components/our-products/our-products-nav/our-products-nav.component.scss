@@ -65,11 +65,7 @@
     --list-item-width: 1.5rem;
     --list-item-gap: 1rem;
     ul {
-      li {
-        span {
-          font-size: calc(var(--text-font-size) - 5px);
-        }
-      }
+      flex-wrap: wrap;
     }
   }
 }

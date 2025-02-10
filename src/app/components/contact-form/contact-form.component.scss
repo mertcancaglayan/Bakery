@@ -16,7 +16,7 @@
 
   input,
   textarea {
-    width: 48%;
+    flex: 1 0 48%;
     margin: 5px;
     border: 1px solid var(--line-color);
     padding: 20px 25px;
@@ -35,7 +35,7 @@
     }
   }
   textarea {
-    width: calc(96% + 5px);
+    min-width: calc(96% + 5px);
   }
 
   button {

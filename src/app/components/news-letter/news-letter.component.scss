@@ -88,7 +88,9 @@
     form {
       display: flex;
       justify-content: space-between;
-      width: 350px;
+      flex: 1 0 100%;
+    width: auto;
+
 
       input {
         padding: 15px 20px;
