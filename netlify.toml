@@ -1,2 +1,2 @@
 [build]
-  publish = "dist/test"
+  publish = "dist/bakery"
